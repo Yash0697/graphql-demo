@@ -1,0 +1,29 @@
+type Venue {
+    id: ID
+    name: String
+    description: String
+    address: Address
+    phone: String
+    email: String
+    managerId: String
+    rating: Float
+    bookingCount: Int
+}
+
+type Address {
+    id: ID
+    city: String
+    state: String
+    zipCode: String
+    country: String
+}
+
+type Query {
+    getAllVenues: [Venue]
+    getVenuesByGreaterRating(rating: Float): [Venue]
+    getVenue(id: Int!): Venue
+}
+
+type Mutation {
+    rateVenue(rating: Float, venueId: Int): Venue
+}

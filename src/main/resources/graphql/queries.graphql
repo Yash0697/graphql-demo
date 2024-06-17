@@ -1,0 +1,13 @@
+query GetAllVenues {
+    getAllVenues {
+        name
+        description
+        address {
+            city
+            state
+            zipCode
+            country
+        }
+        email
+    }
+}
